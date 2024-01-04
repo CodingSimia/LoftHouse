@@ -1,0 +1,35 @@
+.info {
+    position: relative;
+    font-size: 18px;
+
+    &__map,
+    &__tel {
+        // display: flex;
+        // align-items: center;
+        position: relative;
+        padding-left: 35px;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            width: 21px;
+            height: 21px;
+    
+            background-repeat: no-repeat;
+            background-position: center;
+
+            transform: translateY(-50%)
+        }
+    }
+
+    &__map::before {
+        background-image: url('./../../img/header/phone-call.svg');
+    }
+
+    &__tel::before {
+        background-image: url('./../../img/header/map.svg');
+    }
+}
